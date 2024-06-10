@@ -1,0 +1,30 @@
+Screen{
+    layout: horizontal;
+}
+
+.list {
+    height: 100%;
+    border: solid green;
+}
+
+.col{
+    border: solid red;
+    width: 1fr;
+}
+
+.side{
+    dock: right;
+    width: 20;
+    border: solid green;
+}
+
+Button{
+    height: 1;
+    min-width: 1fr;
+    text-align:left;
+    border: none;
+}
+
+.panel {
+    border: solid yellow;
+}
