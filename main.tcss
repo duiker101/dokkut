@@ -18,7 +18,7 @@ Screen{
     border: solid green;
 }
 
-Button{
+.btn-sm{
     height: 1;
     min-width: 1fr;
     text-align:left;
@@ -27,4 +27,19 @@ Button{
 
 .panel {
     border: solid yellow;
+}
+
+PromptModal, ConfirmModal {
+    align: center middle;
+}
+
+PromptModal > Vertical, ConfirmModal > Vertical {
+    width: auto;
+    height: auto;
+}
+
+#dialog {
+    padding: 0 1;
+    border: thick $background 80%;
+    background: $surface;
 }

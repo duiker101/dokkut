@@ -11,3 +11,21 @@ def cmd_domains_report(app):
         'global_enabled': lines[2] == 'true',
         'global_domains': lines[3].split(' '),
     }
+
+
+def cmd_domains_add(app, domain):
+    res = cmd(['dokku', 'domains:add', app, domain])
+
+    success = res.find('--> Added') > 0
+    # TODO error handling
+
+    return True
+
+
+def cmd_domains_remove(app, domain):
+    res = cmd(['dokku', 'domains:remove', app, domain])
+
+    success = res.find('--> Removed') > 0
+    # TODO error handling
+
+    return True

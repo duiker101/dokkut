@@ -1,11 +1,10 @@
-from textual.widgets import DirectoryTree, Footer, Header, Static, ListItem, ListView, Label, Button
-from textual.app import App, ComposeResult
+from textual.app import ComposeResult
+from textual.containers import Horizontal, Vertical
 from textual.screen import Screen
-
-from textual.containers import Container, VerticalScroll, Horizontal, Vertical
+from textual.widgets import Footer, Header, Static, ListItem, ListView, Label, Button
 
 from commands.apps import cmd_apps_list
-from ui.DomainsScreen import DomainsScreen
+from ui.screens.DomainsScreen import DomainsScreen
 
 
 class AppsScreen(Screen):
@@ -35,14 +34,14 @@ class AppsList(Static):
         with Horizontal():
             yield ListView(id="list", classes='list col')
             with Vertical(classes='side'):
-                yield Button('Stats', id='stats')
-                yield Button('Configs', id='configs')
-                yield Button('Storage', id='storage')
-                yield Button('Deployments')
-                yield Button('Logs')
-                yield Button('Domains', id='domains')
-                yield Button('Report')
-                yield Button('Clone')
-                yield Button('Rename')
+                yield Button('Stats', classes='btn-sm', id='stats')
+                yield Button('Configs', classes='btn-sm', id='configs')
+                yield Button('Storage', classes='btn-sm', id='storage')
+                # yield Button('Deployments')
+                # yield Button('Logs')
+                yield Button('Domains', classes='btn-sm', id='domains')
+                # yield Button('Report')
+                # yield Button('Clone')
+                # yield Button('Rename')
 
         yield Footer()
